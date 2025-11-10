@@ -1,5 +1,6 @@
 from mergemate.app import MergeMateApp
 
+
 def main():
     main = MergeMateApp()
     main.run()
