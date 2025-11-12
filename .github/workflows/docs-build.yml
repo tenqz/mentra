@@ -13,6 +13,7 @@ jobs:
     name: Generate Docs & Badge
     runs-on: ubuntu-latest
     if: always()
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -32,9 +33,16 @@ jobs:
           mkdir -p badges
           interrogate --config pyproject.toml --fail-under 0 --generate-badge badges/doc_coverage.svg src
 
+      - name: Copy assets
+        run: |
+          mkdir -p docs/assets
+          cp assets/mergemate_alpha.png docs/assets/
+          cp assets/style.css docs/assets/ || true
+
       - name: Build HTML documentation
         run: |
-          pdoc src/mergemate -o docs
+          pdoc src/mergemate -o docs \
+            --logo https://tenqz.github.io/mergemate/assets/mergemate_alpha.png
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
