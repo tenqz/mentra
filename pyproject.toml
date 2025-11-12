@@ -56,11 +56,17 @@ match = "(?!test_).*\\.py"
 
 [tool.interrogate]
 ignore-init-method = true
+ignore-init-module = true
 ignore-private = true
 ignore-semiprivate = true
 fail-under = 90
-exclude = ["tests", "venv"]
+exclude = ["venv", "__pycache__"]
 verbose = 2
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "-v"
 
 [build-system]
 requires = ["poetry-core"]
