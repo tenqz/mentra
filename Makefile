@@ -1,4 +1,4 @@
-.PHONY: check lint test
+.PHONY: check lint test docstyle
 
 lint:
 	poetry run ruff check src
@@ -6,4 +6,10 @@ lint:
 test:
 	poetry run pytest
 
-check: lint test
+docstyle:
+	poetry run pydocstyle src
+
+check:
+	$(MAKE) lint
+	$(MAKE) test
+	$(MAKE) docstyle
