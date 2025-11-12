@@ -36,13 +36,13 @@ jobs:
       - name: Copy assets
         run: |
           mkdir -p docs/assets
-          cp assets/mergemate_alpha.png docs/assets/
+          cp assets/mentra_alpha.png docs/assets/
           cp assets/style.css docs/assets/ || true
 
       - name: Build HTML documentation
         run: |
-          pdoc src/mergemate -o docs \
-            --logo https://tenqz.github.io/mergemate/assets/mergemate_alpha.png
+          pdoc src/mentra -o docs \
+            --logo https://tenqz.github.io/mentra/assets/mentra_alpha.png
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
