@@ -42,7 +42,8 @@ jobs:
       - name: Build HTML documentation
         run: |
           pdoc src/mergemate -o docs \
-            --logo https://tenqz.github.io/mergemate/assets/mergemate_alpha.png
+            --logo https://tenqz.github.io/mergemate/assets/mergemate_alpha.png \
+            --template-directory templates
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
