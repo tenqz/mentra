@@ -40,6 +40,26 @@ files = [
 ]
 
 [[package]]
+name = "eventsourcing"
+version = "9.4.6"
+description = "Event sourcing in Python"
+optional = false
+python-versions = ">=3.9.2"
+groups = ["main"]
+files = [
+    {file = "eventsourcing-9.4.6-py3-none-any.whl", hash = "sha256:5663f940156f55133eb407bb962349a631942fddb69064ab1040c2010cd6a761"},
+    {file = "eventsourcing-9.4.6.tar.gz", hash = "sha256:093742d5c2e4fcbe835c4b38c8d2193e1c38810c9d27eb76516f55947b096baa"},
+]
+
+[package.dependencies]
+typing_extensions = "*"
+
+[package.extras]
+crypto = ["pycryptodome (>=3.22)"]
+cryptography = ["cryptography (>=44.0)"]
+postgres = ["psycopg[pool] (>=3.2)"]
+
+[[package]]
 name = "iniconfig"
 version = "2.3.0"
 description = "brain-dead simple config-ini parsing"
@@ -380,7 +400,19 @@ files = [
 [package.extras]
 widechars = ["wcwidth"]
 
+[[package]]
+name = "typing-extensions"
+version = "4.15.0"
+description = "Backported and Experimental Type Hints for Python 3.9+"
+optional = false
+python-versions = ">=3.9"
+groups = ["main"]
+files = [
+    {file = "typing_extensions-4.15.0-py3-none-any.whl", hash = "sha256:f0fa19c6845758ab08074a0cfa8b7aecb71c999ca73d62883bc25cc018c4e548"},
+    {file = "typing_extensions-4.15.0.tar.gz", hash = "sha256:0cea48d173cc12fa28ecabc3b837ea3cf6f38c6d1136f85cbaaf598984861466"},
+]
+
 [metadata]
 lock-version = "2.1"
 python-versions = "^3.13"
-content-hash = "673d0627cab1e596329760565a6b9ff3efa9b249f88734c0dd624295df600419"
+content-hash = "b173840b86060dd0df09685b21875616f97d01731d058897d443fb4ced050076"
