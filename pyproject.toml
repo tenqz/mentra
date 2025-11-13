@@ -28,10 +28,11 @@ Issues = "https://github.com/tenqz/mentra/issues"
 
 [tool.poetry.dependencies]
 python = "^3.13"
+eventsourcing = "^9.4.6"
 
 [tool.poetry.group.dev.dependencies]
 ruff = "*"
-pytest = "*"
+pytest = "^9.0"
 pydocstyle = "*"
 interrogate = "*"
 pdoc = "*"
